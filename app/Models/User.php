@@ -19,5 +19,7 @@ class User extends Authenticatable
   public function comments() {
       return $this->hasMany(Commentaire::class);
   }
-  
+  protected $fillable = [
+    'name', 'email', 'password', // Add 'name' here
+];
 }
